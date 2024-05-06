@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modified Automatic Reference Counting</title>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->  
+  </head>
+  <style>
+/*
+body {
+  background-color: black;
+  color:white;
+}*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+  </style>
+  <body>
+    <h1><b><u>Modified Automatic Reference Counting</u></b></h1>
+      <h3> Note: Still a work in progress, and a fun little thing I decided to think about. If there are any situtations in which this doesn't work or I have not explain a part of this (properly) then please let me know </h3>
+      <h4>If you're not familier with ARC, read <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/">this article by Swift.</a></h4>
+      <p>MARC aims to solve the issue of cyclic references without the use of weak or strong pointer</p>
+      <h2><b>The problem</b></h2>
+      <hr>
+      Let's say you have a struct Person with the following (in a madeup C like language):<br>
+      <code> <div>
+        struct Person { <br>
+          &nbsp;&nbsp;&nbsp;String name; <br>
+          &nbsp;&nbsp;&nbsp;Person *friend;<br>
+        };
+        <div>
+      </code>
+      And also you've used them like this:
+      <br>
+      <code> <div>
+          Person alice = {"Alice", NULL};<br>
+          Person bob = {"bob", NULL};
+          <div>
+      </code> <br>
+      If you've read the article mentioned above, you will see the problem if we use ARC in this situtation. <br>
+      If we do <br> <code> alice.friend = &bob </code> and <br><code> bob.friend = &alice</code> we create a circular reference and normal ARC would not be able to garbage collect it since both objects keep referencing each other and prevent the reference count of each other from ever reaching zero.
+      <h2> <b> Solution</b> </h2>
+      <hr>
+      <p> If you have again read the article by Swift, you know that using strong and weak pointers prevent this issue. </p> 
+      <p> But MARC doesn't need to use weak pointers </p> 
+      <p> Here is how MARC approaches this issue. </p>
+      <ol> 
+        <li> First, it sets the reference count of all objects to 0
+        <li> Then it starts counting the references for all objects 
+        <li> If object A references B, then the reference count of B is increased and B is added as a "child" of A
+        <li> If object B also references A, then we have a problem:
+            <ul>
+              <li> If neither A or B are referenced by any other object, then both of them are considered dead 
+              <li> Both A and B are alive if and only  if atleast one of the twos objects are being referenced by another object.
+            </ul> 
+        <li> In a programming language, you would implement this by making variables a constant object, that is the variables won't be deleted by MARC. Then the values of the variable will be the obejcts which can be deleted.
+      </ol>
+
+             <p> Pictorically:  
+</p>
+              <img  src="./res/Marc figures 1.png" alt="image desribing the previous points" >
+
+     So for the following Bob and Alice problem: 
+     <img src="./res/bobandalice.png", alt="image for the bob and alice problem"> 
+     You can note the following:
+     <ol> 
+       <li> The objects in square represent the variables bob and alice. They are the so called "constant" objects mentioned earlier. Without these constant objects, the whole structure would be dead.
+       <li> The constant objects have a reference to one structure <code> Person </code> representing the Person struct for bob and alice which we'll call Bob and Alice respectively.
+        <li> Each person struct references to a string literal which is their names, and also to the each other which is for their friend field.
+      </ol>
+      MARC would do this:
+      <ol> 
+        <li> Set the reference count of all objects to 0
+        <li> Skip the constant objects (because they represent identifiers (or variable names) alice and bob)
+        <li> Now for Bob:
+            <ul> 
+              <li>It would increase the reference count of Bob by 1 (because of the constant that is referencing it)
+              <li> It finds that Alice has a reference to Bob, so it checks if Bob also has a reference to Alice. It does so now it checks if either Bob or Alice have an object which is referencing them which it is not referencing to. In this case finds that constant alice is referencing to Alice, so it increments reference count of Bob by 1
+              <li> It goes over to the "Bob" object and increments its reference count by one.
+            </ul>
+            <li> Same procedure for Alice too:
+              <ul> 
+                <li>It would increase the reference count of Alice by 1 (because of the constant that is referencing it)
+                  <li> It finds that Bob has a reference to Alice, so it checks if Alice also has a reference to Bob. It does so now it checks if either Bob or Alice have an object which is referencing them which it is not referencing to. In this case finds that constant bob is referencing to Bob, so it increments reference count of Alice by 1
+                    <li> It goes over to the "Alice" object and increments its reference count by one.
+              </ul>
+              <ol>
+
+        <p>And thats it, it deems that neither of the two objects should be deallocated. So as long as either bob or alice is alive, neither Bob nor Alice will be dead.</p>
+  </body>
+</html> 

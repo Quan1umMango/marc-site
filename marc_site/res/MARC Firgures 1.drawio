@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" modified="2024-05-06T12:44:47.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="JRE2hcRDflX5JASS38WD" version="24.3.1" type="device">
+  <diagram name="Page-1" id="kN0ao36yv1h4fUl8PRlq">
+    <mxGraphModel dx="880" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-1" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="100" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.629;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="WzlNcuIHchRx7yp_-7Px-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="140" as="sourcePoint" />
+            <mxPoint x="370" y="134" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="281" y="134" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-3" value="B" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="100" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-5" value="Both A and B die" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="460" y="240" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-6" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="220" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-8" value="B" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="WzlNcuIHchRx7yp_-7Px-8" target="WzlNcuIHchRx7yp_-7Px-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="280" as="sourcePoint" />
+            <mxPoint x="410" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="WzlNcuIHchRx7yp_-7Px-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="230" as="sourcePoint" />
+            <mxPoint x="370" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-12" value="B is alive as long as A is alive" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="460" y="130" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-13" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="450" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-14" value="B" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="450" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" source="WzlNcuIHchRx7yp_-7Px-14" target="WzlNcuIHchRx7yp_-7Px-13" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="510" as="sourcePoint" />
+            <mxPoint x="410" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" target="WzlNcuIHchRx7yp_-7Px-14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="460" as="sourcePoint" />
+            <mxPoint x="370" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-17" value="C" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="335" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.4;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="246" y="405" as="sourcePoint" />
+            <mxPoint x="244" y="449.02" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-19" value="Here, both A and B are alive as long as C is alive. Once C is dead, A and B are both dead too" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="460" y="460" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-20" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="685" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-21" value="B" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="685" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" source="WzlNcuIHchRx7yp_-7Px-21" target="WzlNcuIHchRx7yp_-7Px-20" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="745" as="sourcePoint" />
+            <mxPoint x="400" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" target="WzlNcuIHchRx7yp_-7Px-21" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="695" as="sourcePoint" />
+            <mxPoint x="360" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-24" value="C" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="570" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.4;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="236" y="640" as="sourcePoint" />
+            <mxPoint x="234" y="684.02" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-26" value="In this case, A and B are alive as long as either C or D is alive" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="450" y="610" width="200" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-27" value="D" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="570.98" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.4;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="396" y="640.98" as="sourcePoint" />
+            <mxPoint x="394" y="685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-30" value="To build up some intuition about this, think of cyclic references as a single object, so Fig 2 is just like one single object (and hence is dead)&lt;div&gt;Fig 3 is like Fig 1&lt;/div&gt;&lt;div&gt;Fig 4 is like Fig 1 but with another object attached to B&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="157.5" y="760" width="482.5" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-31" value="Fig 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="220" y="170" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-32" value="Fig 2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="220" y="290" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-33" value="Fig 3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="225" y="530" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzlNcuIHchRx7yp_-7Px-35" value="Fig 4" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="220" y="750" width="200" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
